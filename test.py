@@ -1,9 +1,10 @@
 # test
-
+import random
 
 def main():
 
-    print('*' * 10)
+    random_number = random.randint(0,10)
+    print(random_number)
 
 
 main()
