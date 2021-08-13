@@ -7,26 +7,37 @@
 
 def main():
 
-    by3 = []
-    by5 = []
-    byBoth = []
-
     # Gets range from user
-    start = input("Please enter a starting point: ")
-    end = input("Please enter an end point: ")
-    range = range(int(start), int(end))
+    start = input("Please enter starting value: ")
+    end = input("Please enter ending value: ")
+    crange = range(int(start), int(end)+1)
 
     # Loops through each number and defines what they are divisible by
-    for i in range:
+    for i in crange:
+        strToPrint = str(i)
         bothPossible = False
 
         if div3(i):
-            by3.append(i)
+            strToPrint = str(i) + " -- 3"
+            bothPossible = True
 
         if div5(i):
-            by5.append(i)
+            strToPrint = str(i) + " -- 5"
             if bothPossible:
-                byBoth.append(i)
+                strToPrint = str(i) + " -- Both"
 
-    for i in range:
+        print(strToPrint)
 
+
+def div3(num):
+
+    if num % 3 == 0:
+        return True
+
+
+def div5(num):
+    if num % 5 == 0:
+        return True
+
+
+main()
